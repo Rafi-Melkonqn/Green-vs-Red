@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Green vs Red</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Green vs Red</h1>
+        <h2>Enter grid size</h2>
+        <form id="sizeGrid">
+            Grid Height:
+            <input type="number" id="inputHeight" name="height" min="1" value="1">
+            Grid Wight:
+            <input type="number" id="inputWight" name="wight" min="1" value="1">
+            <input type="submit" value="Create" onclick="makeGrid();return false;">
+        </form>
+
+        <h2>Color</h2>
+        <form id="colors" name="colors">
+            <input type="radio" id="0" name="color" value="Red"> Red
+            <input type="radio" id="1" name="color" value="Green"> Green
+        </form>
+        <h2>Battle colors</h2>
+        <table id="grid"></table>
+        <form id="calculation">
+            Input step:
+            <input type="number" id="step" name="step"  min="1" value="1">
+            Select x:
+            <input type="number" id="cordinateX" name="x" min="0" value="0">
+            Select y:
+            <input type="number" id="cordinateY" name="y" min="0" value="0">
+            <input type="submit" name="Calculate" value="Go" onclick="makeCalculate();return false;">
+        </form>
+        <script src=" calculateSteps.js"></script>
+        <script src="changeColor.js"></script>
+        <script src=" createGrid.js"></script>
+        
+    </body>
+</html>
